@@ -1,10 +1,9 @@
-## The main goal of this assignment is to write two functions (makeCacheMatrix ()
-## and cacheSolve()) that cache the inverse of a matrix
+## The main goal of this assignment is to write two functions (makeCacheMatrix () and cacheSolve()) 
+## that cache the inverse of a matrix
 
 ##### Function makeCacheMatrix()
 ## Arguments: x (a matrix) 
-## Creates a special "matrix" object with x (the matrix) and i (the inverse) 
-## that contains four functions:
+## Creates a special "matrix" object with x (the matrix) and i (the inverse) that contains four functions:
 ## set() - assigns the matrix to x and NULL to i in the parent environment
 ## get() - gets the matrix x from the parent environment
 ## setinverse() - assigns the inverse calculated in cacheSolve to i
@@ -27,12 +26,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ##### Function cacheSolve()
 ## Arguments: x (a matrix) and ... (extra arguments)
-## Calculates the inverse of the matrix. If it has already been 
-## calculated, it'll retrieve the result of the operation.
-## It uses the $getinverse function to get the inverse if has 
-## already been calculated. If it hasn't, it uses the $get()
-## function to get the matrix, solve for the inverse and
-## use $setinverse to cache the inverse.
+## Calculates the inverse of the matrix. If it has already been calculated, it'll retrieve the
+## result of the operation. It uses the $getinverse function to get the inverse if has 
+## already been calculated. If it hasn't, it uses the $get() function to get the matrix, solve
+## for the inverse and use $setinverse to cache the inverse.
 ## It returns the inverse of the matrix.
 cacheSolve <- function(x, ...) {
   i <- x$getinverse()
